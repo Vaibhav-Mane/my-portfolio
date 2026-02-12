@@ -1,4 +1,34 @@
 document.addEventListener("DOMContentLoaded", function () {
+    function showToast(message, type) {
+        let toast = document.getElementById("formToast");
+        const toastType = type || "success";
+
+        if (!toast) {
+            toast = document.createElement("div");
+            toast.id = "formToast";
+            toast.className = "form-toast";
+            document.body.appendChild(toast);
+        }
+
+        const title = toastType === "success" ? "Success" : "Error";
+        const symbol = toastType === "success" ? "✓" : "!";
+
+        toast.innerHTML =
+            '<div class="toast-badge">' + symbol + '</div>' +
+            '<div class="toast-content">' +
+            '<strong>' + title + "</strong>" +
+            "<p>" + message + "</p>" +
+            "</div>";
+        toast.classList.remove("success", "error", "show");
+        toast.classList.add(toastType);
+        toast.offsetHeight;
+        toast.classList.add("show");
+
+        window.clearTimeout(showToast._timer);
+        showToast._timer = window.setTimeout(function () {
+            toast.classList.remove("show");
+        }, 2600);
+    }
 
     const links = document.querySelectorAll("nav .links a");
     const nav = document.querySelector("nav");
@@ -38,13 +68,44 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contactForm");
 
     if (form) {
-        form.addEventListener("submit", function (event) {
-            const formAction = form.getAttribute("action") || "";
-            const isPlaceholderAction = formAction.includes("your_form_id");
+        form.addEventListener("submit", async function (event) {
+            event.preventDefault();
 
-            if (isPlaceholderAction) {
-                event.preventDefault();
-                alert("Replace 'your_form_id' in contact.html with your real Formspree form ID.");
+            const formAction = form.getAttribute("action") || "";
+            const submitButton = form.querySelector('button[type="submit"]');
+
+            if (!formAction) {
+                showToast("Form action is missing.", "error");
+                return;
+            }
+
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.textContent = "Submitting...";
+            }
+
+            try {
+                const response = await fetch(formAction, {
+                    method: "POST",
+                    body: new FormData(form),
+                    headers: {
+                        Accept: "application/json"
+                    }
+                });
+
+                if (response.ok) {
+                    showToast("Message submitted successfully.", "success");
+                    form.reset();
+                } else {
+                    showToast("Submission failed. Please try again.", "error");
+                }
+            } catch (error) {
+                showToast("Network error. Please try again.", "error");
+            } finally {
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.textContent = "Submit";
+                }
             }
         });
     }

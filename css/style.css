@@ -417,6 +417,78 @@ button:not(.nav-toggle):hover {
     transform: translateY(-1px);
 }
 
+.form-toast {
+    position: fixed;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-14px) scale(0.96);
+    width: min(92vw, 420px);
+    padding: 12px 14px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.4;
+    background: linear-gradient(140deg, rgba(8, 22, 34, 0.92), rgba(18, 34, 46, 0.88));
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35), 0 0 20px rgba(0, 198, 255, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.28s ease, transform 0.28s ease;
+    z-index: 999;
+}
+
+.form-toast.success {
+    border-color: rgba(0, 245, 212, 0.45);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35), 0 0 26px rgba(0, 245, 212, 0.22);
+}
+
+.form-toast.error {
+    border-color: rgba(255, 92, 92, 0.55);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35), 0 0 26px rgba(255, 92, 92, 0.2);
+}
+
+.toast-badge {
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+    font-size: 18px;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.form-toast.success .toast-badge {
+    background: linear-gradient(145deg, rgba(0, 245, 212, 0.75), rgba(0, 114, 255, 0.55));
+}
+
+.form-toast.error .toast-badge {
+    background: linear-gradient(145deg, rgba(255, 92, 92, 0.85), rgba(255, 140, 102, 0.65));
+}
+
+.toast-content strong {
+    display: block;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+
+.toast-content p {
+    margin: 2px 0 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 13px;
+}
+
+.form-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     nav {
@@ -575,5 +647,10 @@ button:not(.nav-toggle):hover {
 
     .skill-level {
         font-size: 11px;
+    }
+
+    .form-toast {
+        top: 10px;
+        width: min(94vw, 420px);
     }
 }
