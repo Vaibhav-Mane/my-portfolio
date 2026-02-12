@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - My Static Website</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+    <div class="logo">VM</div>
+    <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div class="links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+    <section class="container">
+        <h1>About Me</h1>
+
+        <p>
+            I am a backend developer with experience building APIs and scalable systems.
+            I enjoy solving real-world problems and working with clean architecture.
+            Currently, I am focused on improving my full-stack development skills.
+        </p>
+        <p>
+            My approach to engineering is practical and product-driven. I care about speed, but not at the expense
+            of reliability. I prefer solutions that are easy to reason about, easy to test, and easy for teams to
+            maintain as the project evolves over time.
+        </p>
+
+        <h3>Skills</h3>
+        <div class="skills-grid">
+            <article class="skill-card">
+                <div class="skill-head">
+                    <h4>Python</h4>
+                    <span class="skill-level">Advanced</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 93%;"></div>
+                </div>
+                <div class="skill-tags">
+                    <span>Clean Code</span><span>Automation</span><span>Testing</span>
+                </div>
+            </article>
+            <article class="skill-card">
+                <div class="skill-head">
+                    <h4>FastAPI</h4>
+                    <span class="skill-level">Advanced</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 90%;"></div>
+                </div>
+                <div class="skill-tags">
+                    <span>Routing</span><span>Dependency Injection</span><span>Async</span>
+                </div>
+            </article>
+            <article class="skill-card">
+                <div class="skill-head">
+                    <h4>REST APIs</h4>
+                    <span class="skill-level">Strong</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 88%;"></div>
+                </div>
+                <div class="skill-tags">
+                    <span>Auth</span><span>Pagination</span><span>Error Models</span>
+                </div>
+            </article>
+            <article class="skill-card">
+                <div class="skill-head">
+                    <h4>Docker & Linux</h4>
+                    <span class="skill-level">Strong</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 85%;"></div>
+                </div>
+                <div class="skill-tags">
+                    <span>Containers</span><span>Deployment</span><span>Debugging</span>
+                </div>
+            </article>
+        </div>
+
+        <div class="content-section">
+            <h2>Professional Journey</h2>
+            <div class="timeline-item">
+                <h3>Foundation in Core Programming</h3>
+                <p>
+                    I started by strengthening core programming fundamentals, data structures, and problem solving.
+                    That foundation helped me write clear logic and debug complex behavior confidently.
+                </p>
+            </div>
+            <div class="timeline-item">
+                <h3>Backend Specialization</h3>
+                <p>
+                    I moved into API development with Python and FastAPI, focusing on validation, error handling,
+                    authentication flows, and database integration using clean service boundaries.
+                </p>
+            </div>
+            <div class="timeline-item">
+                <h3>Production and Scalability</h3>
+                <p>
+                    As projects matured, I worked more on deployment workflows, monitoring, and performance tuning.
+                    This phase taught me to design for operability from day one, not after release.
+                </p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Working Principles</h2>
+            <div class="content-grid">
+                <article class="content-card">
+                    <h4>Clarity Over Cleverness</h4>
+                    <p>
+                        Readable code and explicit interfaces reduce future bugs and onboarding time.
+                        I optimize for team velocity across months, not just one sprint.
+                    </p>
+                </article>
+                <article class="content-card">
+                    <h4>Measure Before Optimizing</h4>
+                    <p>
+                        I use profiling and metrics to find actual bottlenecks before tuning.
+                        This keeps performance work targeted and avoids unnecessary complexity.
+                    </p>
+                </article>
+                <article class="content-card">
+                    <h4>Small Iterations</h4>
+                    <p>
+                        I break work into reviewable increments with tests, which lowers risk and improves feedback.
+                        Frequent delivery creates momentum and faster product learning.
+                    </p>
+                </article>
+                <article class="content-card">
+                    <h4>Operational Readiness</h4>
+                    <p>
+                        I include logging, alerting, and clear runbooks early. Reliable operations are part of
+                        engineering quality, especially when traffic and user impact increase.
+                    </p>
+                </article>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Current Focus</h2>
+            <p>
+                I am currently improving full-stack execution by pairing backend depth with better frontend delivery.
+                My goal is to build complete products where architecture, user experience, and deployment quality are
+                aligned from the start. I am also investing more time in system design documentation, security best
+                practices, and reproducible development environments for team consistency.
+            </p>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

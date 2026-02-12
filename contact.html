@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - My Static Website</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+    <div class="logo">VM</div>
+    <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div class="links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+    </div>
+</nav>
+
+    <section class="container">
+        <h1>Contact Me</h1>
+        <p>
+            If you are planning a backend-heavy product, API redesign, or performance improvement project,
+            I would be glad to discuss your requirements. Share your goals, current challenges, timeline,
+            and expected scale. I can help you shape a practical technical plan and execution roadmap.
+        </p>
+
+        <div class="content-section">
+            <h2>How I Can Help</h2>
+            <div class="content-grid">
+                <article class="content-card">
+                    <h4>API Architecture Review</h4>
+                    <p>
+                        Evaluate your current API design for consistency, versioning strategy,
+                        validation quality, and long-term maintainability.
+                    </p>
+                </article>
+                <article class="content-card">
+                    <h4>Performance Optimization</h4>
+                    <p>
+                        Identify bottlenecks in application code, database queries, and network behavior,
+                        then implement measurable improvements with clear baselines.
+                    </p>
+                </article>
+                <article class="content-card">
+                    <h4>Deployment and CI/CD</h4>
+                    <p>
+                        Build reliable delivery pipelines with automated checks, rollback safety,
+                        and predictable release workflows.
+                    </p>
+                </article>
+                <article class="content-card">
+                    <h4>Backend Mentoring</h4>
+                    <p>
+                        Support teams with practical guidance on architecture decisions, clean coding patterns,
+                        testing strategy, and debugging process improvements.
+                    </p>
+                </article>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Contact Information</h2>
+            <div class="contact-info">
+                <div class="contact-block">
+                    <h4>Email</h4>
+                    <p>vaibhav@example.com</p>
+                </div>
+                <div class="contact-block">
+                    <h4>Location</h4>
+                    <p>India (Remote Friendly)</p>
+                </div>
+                <div class="contact-block">
+                    <h4>Response Time</h4>
+                    <p>Usually within 24 hours on weekdays</p>
+                </div>
+                <div class="contact-block">
+                    <h4>Availability</h4>
+                    <p>Open to freelance, collaboration, and backend consulting</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Send a Message</h2>
+            <p>
+                Use the form below and include a short project summary. If possible, mention your current stack,
+                expected user traffic, and key delivery deadlines so I can respond with useful next steps.
+            </p>
+        </div>
+
+        <form id="contactForm">
+            <div>
+                <label>Name</label><br>
+                <input type="text" id="name" required>
+            </div>
+
+            <br>
+
+            <div>
+                <label>Email</label><br>
+                <input type="email" id="email" required>
+            </div>
+
+            <br>
+
+            <div>
+                <label>Message</label><br>
+                <textarea id="message" rows="5" required></textarea>
+            </div>
+
+            <br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Static Website</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+    <div class="logo">VM</div>
+    <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div class="links" id="navLinks">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+    <section class="container">
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Hi, I'm Vaibhav</h1>
+            <p>
+                Backend Developer specializing in FastAPI and scalable systems.
+                I build production-ready APIs and optimized backend services.
+            </p>
+            <p>
+                I focus on writing reliable software that can handle growth without becoming difficult to maintain.
+                My work combines API design, clean architecture, testing discipline, and production monitoring.
+                The goal is simple: deliver systems that are fast for users and easy for teams to extend.
+            </p>
+
+            <h3>Core Skills</h3>
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <div class="skill-head">
+                        <h4>Python & FastAPI</h4>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 92%;"></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Async APIs</span><span>Pydantic</span><span>Validation</span>
+                    </div>
+                </article>
+                <article class="skill-card">
+                    <div class="skill-head">
+                        <h4>REST API Design</h4>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Versioning</span><span>Security</span><span>Docs</span>
+                    </div>
+                </article>
+                <article class="skill-card">
+                    <div class="skill-head">
+                        <h4>Docker & Linux</h4>
+                        <span class="skill-level">Strong</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 84%;"></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Containers</span><span>CI/CD</span><span>Shell</span>
+                    </div>
+                </article>
+                <article class="skill-card">
+                    <div class="skill-head">
+                        <h4>System Architecture</h4>
+                        <span class="skill-level">Strong</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 86%;"></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Scalability</span><span>Caching</span><span>Queues</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="assets/profile.jpg" alt="Profile" onerror="this.style.display='none'; this.parentElement.classList.add('missing-image');">
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2>What I Build</h2>
+        <div class="content-grid">
+            <article class="content-card">
+                <h4>Backend APIs</h4>
+                <p>
+                    Structured APIs with clear versioning, robust validation, and predictable response models.
+                    I prioritize stability and straightforward documentation so frontend teams can move quickly.
+                </p>
+            </article>
+            <article class="content-card">
+                <h4>Scalable Services</h4>
+                <p>
+                    Services designed for horizontal scaling, asynchronous workloads, and efficient database access.
+                    I usually combine caching, queue processing, and profiling to reduce latency under load.
+                </p>
+            </article>
+            <article class="content-card">
+                <h4>Deployment Pipelines</h4>
+                <p>
+                    CI/CD pipelines with linting, tests, and deploy automation to keep releases consistent.
+                    The objective is lower risk and faster delivery with visible deployment history.
+                </p>
+            </article>
+            <article class="content-card">
+                <h4>Observability</h4>
+                <p>
+                    Logging, metrics, and health checks that make debugging production issues practical.
+                    I treat observability as part of the product, not an afterthought.
+                </p>
+            </article>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2>Project Highlights</h2>
+        <div class="stats">
+            <div class="stat-box">
+                <strong>15+</strong>
+                APIs designed and deployed
+            </div>
+            <div class="stat-box">
+                <strong>99.9%</strong>
+                uptime targets across services
+            </div>
+            <div class="stat-box">
+                <strong>40%</strong>
+                average response-time improvement
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2>How I Work</h2>
+        <p>
+            I start by translating product goals into technical requirements and measurable outcomes.
+            Then I design a simple, testable architecture and implement incrementally with continuous feedback.
+            During development, I keep code quality high through modular design, code reviews, and automated checks.
+            After launch, I monitor performance, identify bottlenecks, and iterate based on real usage patterns.
+        </p>
+    </div>
+</section>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
