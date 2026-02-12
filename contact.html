@@ -94,24 +94,25 @@
             </p>
         </div>
 
-        <form id="contactForm">
+        <form id="contactForm" action="https://formspree.io/f/mgologjl" method="POST">
+            <input type="hidden" name="_subject" value="New message from portfolio site">
             <div>
                 <label>Name</label><br>
-                <input type="text" id="name" required>
+                <input type="text" id="name" name="name" required>
             </div>
 
             <br>
 
             <div>
                 <label>Email</label><br>
-                <input type="email" id="email" required>
+                <input type="email" id="email" name="email" required>
             </div>
 
             <br>
 
             <div>
                 <label>Message</label><br>
-                <textarea id="message" rows="5" required></textarea>
+                <textarea id="message" name="message" rows="5" required></textarea>
             </div>
 
             <br>

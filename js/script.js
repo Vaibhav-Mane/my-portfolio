@@ -39,9 +39,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (form) {
         form.addEventListener("submit", function (event) {
-            event.preventDefault();
-            alert("Message submitted (demo only)");
-            form.reset();
+            const formAction = form.getAttribute("action") || "";
+            const isPlaceholderAction = formAction.includes("your_form_id");
+
+            if (isPlaceholderAction) {
+                event.preventDefault();
+                alert("Replace 'your_form_id' in contact.html with your real Formspree form ID.");
+            }
         });
     }
 
