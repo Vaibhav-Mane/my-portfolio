@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (navToggle && navLinks && nav) {
         navToggle.addEventListener("click", function () {
-            const isOpen = navLinks.classList.toggle("open");
-            nav.classList.toggle("nav-open", isOpen);
+            const isOpen = nav.classList.toggle("nav-open");
+            navLinks.classList.toggle("open", isOpen);
             navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
         });
 

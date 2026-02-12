@@ -28,6 +28,8 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 15px 60px;
+    position: relative;
+    z-index: 120;
     background-color: rgba(10, 20, 28, 0.45);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -445,7 +447,6 @@ button:not(.nav-toggle):hover {
     nav {
         padding: 14px 16px;
         gap: 12px;
-        position: relative;
     }
 
     nav .logo {
@@ -470,10 +471,11 @@ button:not(.nav-toggle):hover {
         background: rgba(8, 17, 24, 0.9);
         backdrop-filter: blur(14px);
         -webkit-backdrop-filter: blur(14px);
-        z-index: 50;
+        z-index: 130;
     }
 
-    nav .links.open {
+    nav .links.open,
+    nav.nav-open .links {
         display: flex;
     }
 
